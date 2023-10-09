@@ -1,0 +1,26 @@
+/* import React from "react";
+import Home from "./Movie_web_app/Pages/Home/Home";
+import Details from "./Movie_web_app/Pages/Details/Details";
+import PageNotFind from "./Movie_web_app/Pages/404/PageNotFind";
+import SearchResult from "./Movie_web_app/Pages/SearchResult/SearchResult";
+import Explore from "./Movie_web_app/Pages/Explore/Explore";
+import Header from "./Movie_web_app/Componants/Header/Header";
+import Footer from "./Movie_web_app/Componants/Footer/Footer";
+import { Route, Routes } from "react-router-dom";
+
+const App = () => {
+  return (
+    <>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/:mediaType/:id" element={<Details />} />
+        <Route path="/search/:query" element={<SearchResult />} />
+        <Route path="/explore/:mediaType" element={<Explore />} />
+        <Route path="*" element={<PageNotFind />} />
+      </Routes>
+      <Footer />
+    </>
+  )
+}
+export default App;  */

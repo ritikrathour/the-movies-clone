@@ -1,0 +1,34 @@
+.footer{
+    margin-top: 2rem;
+}
+.footer_links_list,
+.footer__social__links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin: 1rem 0;
+}
+.item .link{
+    font-size: 16px;
+    font-weight: 500;
+}
+.footer__description{
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.2;
+    max-width: 700px;
+    margin: auto;
+}
+.item .link i{
+    font-size: 20px;
+}
+@media (max-width:400px) {
+    .footer_links_list { 
+    gap: 5px;  
+    width: 100%;
+}
+    .item .link{
+        font-size: 14px; 
+    }
+}

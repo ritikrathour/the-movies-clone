@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+:root {
+    --main-linear-color: linear-gradient(to right, rgb(255, 187, 1),rgb(229, 81, 1));
+    --color-white: #fff;
+    --color-black: #000;
+    --light-black: rgba(0, 0, 0, .3);
+    --ex-light-black: #ffffff94;
+    --border-color: #303030;
+    --input-background: #121212;
+    --search-background: #ffffff14;
+    --bg-color: #04152d;
+    --color-yellow:yellow;
+    --color-red :red;
+}
+
+body {
+    background-color: var(--bg-color);
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--ex-light-black);
+    border-radius: 10px;
+}
+
+.container {
+    max-width: 1260px;
+    margin: auto;
+    padding: 0 1rem;
+}
+
+.btn {
+    padding: 8px 20px;
+    background-color: purple;
+    border-radius: 5px;
+    color: var(--color-white);
+    margin-top: 10px;
+    letter-spacing: 1px-;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+i {
+    color: var(--color-white);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}
+
+input,
+button {
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+/* ___________________________tabs_______________________  */
+.tabs { 
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    width: 240px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: var(--color-white); 
+    position: relative;
+}
+.tab__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tab__header .title{
+    font-size: 26px;
+    letter-spacing: 1px;
+}
+.tabs .tab { 
+    width: 110px;
+    height: 100%; 
+    border-radius:40px;
+    text-align: center;
+    line-height: 35px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    color: var(--color-black) ; 
+    font-weight: 600;
+    z-index: 1; 
+    transition: .3s;
+}
+.tabs .tab.active{
+    color: var(--color-white);
+}
+.tabs .bgSlide{ 
+    position: absolute; 
+    width: 110px;
+    height: 35px;
+    border-radius: 50px;
+    background: var(--main-linear-color); 
+    transform: translateX(10px);
+    transition: .3s;
+}
+@media (max-width:400px){ 
+    .tab__header{
+        flex-direction: column;
+        gap: 10px;
+    } 
+}

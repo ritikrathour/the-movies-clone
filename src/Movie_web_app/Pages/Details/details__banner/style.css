@@ -1,0 +1,123 @@
+.details__banner-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 2rem;
+}
+.img__box{
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    height: 650px;
+}
+.img__box img{ 
+    height: 100%;
+    object-fit: cover;
+}
+.content{ 
+    width: 100%; 
+}
+.details__actions{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 1.5rem 0;
+}
+.details__actions .rating{
+    width: 70px;
+}
+.CircularProgressbar .CircularProgressbar-text {
+    font-size: 30px;
+    font-weight: 700; 
+}
+.details__movie__about{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin:1.5rem 0 0;
+    border-bottom: 1px solid var(--ex-light-black);
+    padding-bottom: 10px;
+}
+.content .details__title{
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+.content .description{
+    font-size: 13px;
+    color: var(--ex-light-black);
+}
+.content .details__subTitle{
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+.content .movie__description{
+    font-size: 14px;
+    line-height: 1.3;
+}
+.content .text{
+    font-size: 14px;
+}
+.content .text__light{
+    color: var(--ex-light-black);
+    margin-left: 2px;  
+}
+.director,.writer{
+    margin: 10px 0;
+    border-bottom: 1px solid var(--ex-light-black);
+    padding-bottom: 10px;
+}
+@media (min-width:768px) {
+    .details__banner-container{ 
+        flex-direction: row; 
+    }
+    .img__box{ 
+        height: 460px;
+    }
+}
+@media (min-width:1024px) { 
+   .content{
+    width: 700px;
+   } 
+    .img__box{ 
+        width: 400px;
+        height: 500px;
+    }
+} 
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    position: relative;
+    position: absolute;
+    left: 50%;
+    top: 80px;
+    animation: rotate 1s linear infinite; 
+  }
+  .loader::before , .loader::after {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    inset: 0px;
+    border-radius: 50%;
+    border: 5px solid #FFF;
+    animation: prixClipFix 2s linear infinite ;
+  }
+  .loader::after{
+    inset: 8px;
+    transform: rotate3d(90, 90, 0, 180deg );
+    border-color: #FF3D00;
+  }
+
+  @keyframes rotate {
+    0%   {transform: rotate(0deg)}
+    100%   {transform: rotate(360deg)}
+  }
+
+  @keyframes prixClipFix {
+      0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+      50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+      75%, 100%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+  }

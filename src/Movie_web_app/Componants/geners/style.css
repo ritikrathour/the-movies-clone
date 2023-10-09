@@ -1,0 +1,14 @@
+.geners__list{
+    display: flex; 
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+.geners__list .gener__item{
+    background-color: var(--color-red);
+    padding:4px 8px;
+    font-size: 12px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    border-radius: 4px;
+}

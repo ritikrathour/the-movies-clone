@@ -1,0 +1,98 @@
+.left__arrow,.right__arrow{
+    position: absolute;
+    top: 50%; 
+    transform: translateY(-50%);
+    height: 50%;
+    width: 30px;
+    background-color: rgba(0,0,0,.3);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s;
+    z-index: 1; 
+}
+.left__arrow:hover,.right__arrow:hover{
+    background-color: rgba(0,0,0,.6);
+}
+.left__arrow{
+    left: 15px;
+}
+.right__arrow{
+    right: 15px;
+}
+
+.carousel_container{ 
+    margin-top: 1rem;
+    position: relative;
+    width: 100%;   
+    overflow: hidden;
+}
+.carousel_container .wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: start;  
+    scroll-behavior: smooth;
+    gap: 20px;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    overflow-y: auto;  
+}
+.carousel_container .wrapper::-webkit-scrollbar{
+    display: none;
+}
+.carousel_container .card{
+    scroll-snap-align: start; 
+    min-width: 150px; 
+    border-radius: 10px; 
+    position: relative;
+    cursor: pointer;
+}
+.carousel_container .card .name{
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.carousel_container .card img{ 
+   height: 200px;
+   border-radius: 10px;
+}  
+ 
+/* for rating  */
+.carousel_container .card .circleRating {
+    position: absolute;
+    bottom: 40px; 
+    left: 5px;
+    color: white;
+    width: 60px;
+    background-color: black;
+    border-radius: 50%;
+    padding: 2px;
+    .CircularProgressbar-text {
+        font-size: 25px;
+        font-weight: 700;
+        fill: white;
+    }
+    .CircularProgressbar-trail {
+        stroke: transparent;
+    }
+}
+.carousel_container .card .name{
+    font-size: 14px;
+}
+.carousel_container .card .date{
+    font-size: 12px;
+    margin-top: 5px;
+}
+@media (min-width:700px){
+    .carousel_container .card{ 
+        min-width: 226px;  
+    }
+    .carousel_container .card img{ 
+       height: 280px; 
+    }
+    .left__arrow,.right__arrow{
+        display: flex;
+    }
+}

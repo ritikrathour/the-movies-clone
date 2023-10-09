@@ -1,0 +1,94 @@
+.official__videos__wrapper{
+    margin: 2rem auto;
+}
+ .official__videos__wrapper .title{
+    font-size: 20px;
+ }
+.official__videos__wrapper .official__videos__container{
+    display: flex;
+    align-items: center;
+    justify-content: start;  
+    scroll-behavior: smooth; 
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    overflow-y: auto;  
+    margin-top:1rem;
+}
+.official__videos__wrapper .official__videos__container::-webkit-scrollbar{
+    display: none;
+}
+.official__videos__wrapper .offical__videos__content{
+    scroll-snap-align: start;  
+    border-radius: 10px; 
+    position: relative;
+    cursor: pointer;
+}
+.official__videos__wrapper .official__video{ 
+    height:100px;
+    width: 180px;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+} 
+.official__videos__wrapper .official__video .play__icon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 24px; 
+} 
+.official__videos__wrapper .official__video img{
+    object-fit: cover;
+    height: 100%; 
+    opacity: .6;
+    transition: .4s ease;
+} 
+.official__videos__wrapper .official__video:hover img{
+    opacity: 1;
+} 
+.official__video__info{ 
+    margin-top:8px;
+}
+.official__video__info .text{
+    font-size: 16px; 
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden; 
+} 
+@media (min-width:700px){
+    .official__videos__wrapper .cast__img__circle{
+        width: 1px;
+        height: 130px;
+    }
+}
+
+.videoSkeleton {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    margin-right: -20px;
+    margin-left: -20px;
+    padding: 0 20px; 
+    .skItem {
+        width: 150px;
+        flex-shrink: 0; 
+        .thumb {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border-radius: 12px;
+            margin-bottom: 10px;
+        }
+        .row {
+            height: 20px;
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .row2 {
+            height: 20px;
+            width: 75%;
+            border-radius: 10px;
+        }
+    }
+}

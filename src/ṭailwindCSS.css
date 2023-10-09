@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* body css style="background-color: #13131e;" */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500&display=swap'); */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+} 
+
+:root {
+    --color-white: #fff;  
+    --bg-color: #13131e;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,1);
+    border-radius: 10px;
+}
+
+.App__container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 2rem; 
+}  
+
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+i {
+    color: var(--color-white);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    width: 100%; 
+}
+
+input,
+button {
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+main{ 
+    overflow-x: hidden;
+} 
+ .fa-arrow-up {
+    transform: rotate(45deg);
+}
+.filter_blur_1{
+    position: absolute;
+    width: 405px;
+    height: 471px;
+    left: 750px;
+    top: 90px;
+    background:rgba(255,255,255,1);
+    z-index: -1;
+    filter: blur(375px);
+}
+.filter_blur_2{
+    position: absolute;
+    width: 345px;
+    height: 314px;
+    left: 992px;
+    top: -150px;
+    background:linear-gradient(90deg,#f4c4f3 0%, #fc07fa 100%);
+    filter: blur(450px);
+    border-radius: 200px;
+    transform: rotate(-20deg);
+    z-index: -1;
+}
+.filter_blur_3{
+    position: absolute;
+    width: 482px;
+    height: 315px;
+    left: 765px;
+    top: 202px;
+    background:linear-gradient(90deg,rgba(26,41,128,.5) 0%,rgba(38,208,200,.5) 100%);
+    filter: blur(325px);
+    border-radius: 200px;
+    transform: rotate(-67deg);
+    z-index: -1;
+}
+.bg-text-gradient {
+    background: linear-gradient(to right, green, rgb(205, 205, 205));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+} 
+.bg-text-gradient-2{
+    background: linear-gradient(125deg,#272727 0%, #111010 100%); 
+}
+.home{
+    margin-top: 40px;
+}
+header nav ul{
+    transition: .5s ease-in-out;
+}
+
+.cards .card:hover,
+.business__list li:hover{
+    background: linear-gradient(125deg,#272727 0%, #111010 100%);
+}
+
+.business__icon{
+    min-width: 40px;
+    height: 40px;
+    background-color: #272727;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+} 
+@media (max-width:640px) {
+    .App__container {
+        padding: 0 1rem;
+    }
+    .progress__list{ 
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .filter_blur_1{ 
+        left: 250px;
+        top: 90px; 
+    }
+    .filter_blur_2{ 
+        left: 192px;
+        top: -150px; 
+    }
+    .filter_blur_3{ 
+        left: 165px;
+        top: 202px;  
+    }
+}
+@media (max-width:425px) { 
+    .progress__list{  
+        grid-template-columns: 1fr;
+    }
+} 
