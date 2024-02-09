@@ -28,13 +28,13 @@ To run this project locally, follow these steps:
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone <repository_url>
+   git clone <reposhttps://github.com/ritikrathour/the-movies-clone/tree/mainitory_url>
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd tmdb-movie-website
+   cd the-movies-clone
    ```
 
 3. Install dependencies using npm:
